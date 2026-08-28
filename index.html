@@ -11,6 +11,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="https://nuwavegarages.com/wp-content/uploads/2024/03/PXL_20230124_195310059-scaled-e1727118494830.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -37,7 +38,6 @@ section{padding:88px 0;position:relative}
 .sec-head{max-width:660px;margin-bottom:46px}
 .sec-head p{color:var(--muted);margin-top:14px;font-size:1.03rem}
 
-/* header */
 header{position:sticky;top:0;z-index:60;background:rgba(10,12,16,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;gap:18px;height:66px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
@@ -53,7 +53,6 @@ nav a:hover{color:var(--text)}
 @media(max-width:980px){nav{display:none}.hcall{margin-left:auto}}
 @media(max-width:430px){.brand b{font-size:1.2rem}.hcall{padding:10px 13px;font-size:.88rem}}
 
-/* hero */
 .hero{position:relative;min-height:clamp(560px,84vh,760px);display:grid;place-items:center;text-align:center;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero-bg{position:absolute;inset:0;background:#0B0E13}
 .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
@@ -64,24 +63,21 @@ nav a:hover{color:var(--text)}
 .stars{display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:rgba(18,22,28,.82);border:1px solid var(--line);padding:9px 17px;border-radius:100px;font-size:.92rem;font-weight:600}
 .stars b{color:var(--amber);letter-spacing:.08em}
 .cta-row{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 27px;border-radius:11px;font-weight:700;font-size:1.02rem;text-decoration:none;border:1px solid transparent;transition:transform .15s,filter .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 27px;border-radius:11px;font-weight:700;font-size:1.02rem;text-decoration:none;border:1px solid transparent;transition:transform .15s,filter .2s;cursor:pointer;font-family:var(--body)}
 .btn svg{width:18px;height:18px}
 .btn:hover{transform:translateY(-2px)}
 .btn-a{background:var(--amber);color:#12100A}
 .btn-b{background:rgba(233,238,244,.06);color:var(--text);border-color:var(--line);backdrop-filter:blur(6px)}
 
-/* trust strip */
 .strip{background:var(--surface);border-bottom:1px solid var(--line)}
 .strip ul{list-style:none;margin:0;padding:20px 0;display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:center;font-size:.87rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
 .strip li{display:flex;align-items:center;gap:9px}
 .strip li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
 
-/* grids + cards */
 .grid{display:grid;gap:18px}
 .g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
 @media(max-width:900px){.g3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.g3,.g2{grid-template-columns:1fr}}
+@media(max-width:620px){.g3{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s}
 .card:hover{border-color:#33465A;transform:translateY(-3px)}
 .card .ic{width:44px;height:44px;border-radius:11px;background:rgba(62,155,233,.12);border:1px solid rgba(62,155,233,.24);display:grid;place-items:center;margin-bottom:18px}
@@ -89,7 +85,6 @@ nav a:hover{color:var(--text)}
 .card h3{margin-bottom:10px}
 .card p{color:var(--muted);font-size:.97rem;margin:0}
 
-/* day cards */
 .days{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:760px){.days{grid-template-columns:1fr}}
 .day{background:linear-gradient(160deg,var(--surface2),var(--surface));border:1px solid var(--line);border-radius:var(--r);padding:32px 28px}
@@ -100,14 +95,12 @@ nav a:hover{color:var(--text)}
 .pill{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:11px 20px;font-size:.9rem;font-weight:600}
 .pill b{color:var(--amber)}
 
-/* steps */
 .steps{counter-reset:s;display:grid;gap:14px}
 .step{display:flex;gap:20px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px}
 .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--display);font-size:1.7rem;color:var(--blue);flex-shrink:0;min-width:44px;opacity:.75}
 .step h3{font-size:1.15rem;margin-bottom:5px}
 .step p{margin:0;color:var(--muted);font-size:.96rem}
 
-/* media tiles */
 .tile{position:relative;border-radius:var(--r);overflow:hidden;background:var(--surface2);background-image:var(--flake);background-size:150px 150px;border:1px solid var(--line);aspect-ratio:4/3}
 .tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .tile:hover img{transform:scale(1.05)}
@@ -117,7 +110,6 @@ nav a:hover{color:var(--text)}
 @media(max-width:860px){.gal{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.gal{grid-template-columns:1fr}}
 
-/* colorado band */
 .band{background:linear-gradient(160deg,#101821,#0C1015);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .band .inner{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
 @media(max-width:860px){.band .inner{grid-template-columns:1fr;gap:30px}}
@@ -125,7 +117,6 @@ nav a:hover{color:var(--text)}
 .chk li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:1rem}
 .chk svg{width:20px;height:20px;stroke:var(--amber);flex-shrink:0;margin-top:3px}
 
-/* reviews */
 .rev-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:34px}
 .big-score{font-family:var(--display);font-size:3.6rem;line-height:1;color:var(--amber)}
 .quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px;display:flex;flex-direction:column}
@@ -133,11 +124,9 @@ nav a:hover{color:var(--text)}
 .quote p{font-size:1.02rem;line-height:1.6;margin:0 0 18px}
 .quote cite{margin-top:auto;font-style:normal;font-size:.83rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 
-/* areas */
 .areas{display:flex;flex-wrap:wrap;gap:10px}
 .areas span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 15px;font-size:.9rem;color:var(--muted)}
 
-/* faq */
 details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px;overflow:hidden}
 summary{cursor:pointer;padding:20px 24px;font-weight:600;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
 summary::-webkit-details-marker{display:none}
@@ -145,7 +134,6 @@ summary::after{content:"+";font-family:var(--display);font-size:1.7rem;color:var
 details[open] summary::after{content:"\2212"}
 details p{padding:0 24px 22px;margin:0;color:var(--muted);font-size:.99rem}
 
-/* contact */
 .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px}
 @media(max-width:880px){.contact-grid{grid-template-columns:1fr}}
 .info{display:grid;gap:14px;margin-top:26px}
@@ -161,12 +149,10 @@ textarea{min-height:96px;resize:vertical}
 form .btn{width:100%}
 .sent{display:none;background:rgba(62,155,233,.1);border:1px solid rgba(62,155,233,.3);border-radius:12px;padding:20px;font-size:.98rem}
 
-/* footer */
 footer{border-top:1px solid var(--line);background:var(--surface);padding:44px 0 110px}
 .f-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 footer p{margin:0;color:var(--muted);font-size:.88rem}
 
-/* mobile call bar */
 .callbar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;gap:10px;padding:11px 14px calc(11px + env(safe-area-inset-bottom));background:rgba(10,12,16,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
 .callbar a{flex:1;padding:14px;border-radius:11px;font-weight:700;text-align:center;text-decoration:none;font-size:1rem}
 @media(max-width:820px){.callbar{display:flex}footer{padding-bottom:130px}}
@@ -196,7 +182,7 @@ footer p{margin:0;color:var(--muted);font-size:.88rem}
 </header>
 
 <div id="top" class="hero">
-<div class="hero-bg"><img src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2024/03/PXL_20230124_195310059-scaled-e1727118494830.jpg" alt="Finished decorative flake garage floor installed by NuWave Garages in Colorado"></div>
+<div class="hero-bg"><img src="https://nuwavegarages.com/wp-content/uploads/2024/03/PXL_20230124_195310059-scaled-e1727118494830.jpg" alt="Finished decorative flake garage floor installed by NuWave Garages in Colorado"></div>
 <div class="hero-in">
 <h1>NuWave <span>Garages</span></h1>
 <div class="stars"><b>&#9733;&#9733;&#9733;&#9733;&#9733;</b> 4.9 from 47 Google reviews</div>
@@ -288,9 +274,9 @@ footer p{margin:0;color:var(--muted);font-size:.88rem}
 <h2>From bare slab to finished floor</h2>
 </div>
 <div class="gal reveal">
-<div class="tile"><span class="tag">Before</span><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2024/07/20210812_115353-scaled.jpg" alt="Bare stained concrete garage slab before coating"></div>
-<div class="tile"><span class="tag">During</span><img loading="lazy" src="https://web.archive.org/web/20250807015858im_/https://nuwavegarages.com/wp-content/uploads/2025/05/20250512_084757-1536x2048.jpg" alt="NuWave Garages crew preparing and grinding a concrete garage floor"></div>
-<div class="tile"><span class="tag">After</span><img loading="lazy" src="https://web.archive.org/web/20250807015738im_/https://nuwavegarages.com/wp-content/uploads/2022/12/11PXL_20220830_174253379.jpg" alt="Finished decorative flake garage floor with high gloss topcoat"></div>
+<div class="tile"><span class="tag">Before</span><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2024/07/20210812_115353-scaled.jpg" alt="Bare stained concrete garage slab before coating"></div>
+<div class="tile"><span class="tag">During</span><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2025/05/20250512_084757-1536x2048.jpg" alt="NuWave Garages crew preparing and grinding a concrete garage floor"></div>
+<div class="tile"><span class="tag">After</span><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2022/12/11PXL_20220830_174253379.jpg" alt="Finished decorative flake garage floor with high gloss topcoat"></div>
 </div>
 </div>
 </section>
@@ -302,12 +288,12 @@ footer p{margin:0;color:var(--muted);font-size:.88rem}
 <h2>Our work across Colorado</h2>
 </div>
 <div class="gal reveal">
-<div class="tile"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2022/12/Epoxy-Garage-Flooring-Lyons-CO.jpg" alt="Epoxy garage flooring installed in Lyons, Colorado"></div>
-<div class="tile"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2022/08/NuWave-Gallery-64.jpg" alt="Flake coated driveway and parking pad"></div>
-<div class="tile"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2022/08/NuWave-Gallery-41.jpg" alt="Light gray flake floor in a finished residential garage"></div>
-<div class="tile"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2024/07/PXL_20220227_180052901-scaled.jpg" alt="Coated garage floor with workbench and storage"></div>
-<div class="tile"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2025/06/20250603_094613-1536x2048.jpg" alt="Finished flake floor in a garage with wall shelving"></div>
-<div class="tile"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2025/03/PXL_20221123_183331446-scaled.jpg" alt="Freshly broadcast decorative flake across a garage floor"></div>
+<div class="tile"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2022/12/Epoxy-Garage-Flooring-Lyons-CO.jpg" alt="Epoxy garage flooring installed in Lyons, Colorado"></div>
+<div class="tile"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2022/08/NuWave-Gallery-64.jpg" alt="Flake coated driveway and parking pad"></div>
+<div class="tile"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2022/08/NuWave-Gallery-41.jpg" alt="Light gray flake floor in a finished residential garage"></div>
+<div class="tile"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2024/07/PXL_20220227_180052901-scaled.jpg" alt="Coated garage floor with workbench and storage"></div>
+<div class="tile"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2025/06/20250603_094613-1536x2048.jpg" alt="Finished flake floor in a garage with wall shelving"></div>
+<div class="tile"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2025/03/PXL_20221123_183331446-scaled.jpg" alt="Freshly broadcast decorative flake across a garage floor"></div>
 </div>
 </div>
 </section>
@@ -326,7 +312,7 @@ footer p{margin:0;color:var(--muted);font-size:.88rem}
 </ul>
 </div>
 <div class="reveal">
-<div class="tile tall"><img loading="lazy" src="https://web.archive.org/web/20260418221215im_/https://nuwavegarages.com/wp-content/uploads/2025/06/20250603_094613-1536x2048.jpg" alt="Durable flake garage floor finished by NuWave Garages"></div>
+<div class="tile tall"><img loading="lazy" src="https://nuwavegarages.com/wp-content/uploads/2025/06/20250603_094613-1536x2048.jpg" alt="Durable flake garage floor finished by NuWave Garages"></div>
 </div>
 </div>
 </section>
